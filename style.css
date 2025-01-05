@@ -212,6 +212,21 @@ p {
     font-weight: 600;
 }
 
+.form__group input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Outfit', cursive;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form__group input[type="date"]:focus {
+    border-color: #967044;
+}
+
 .form__group input,
 .form__group select,
 .form__group textarea {
@@ -247,4 +262,84 @@ p {
 
 .form__button:hover {
     background-color: #be884a;
+}
+
+.menu__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.menu__tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.menu__tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Rouge Script', cursive;
+    font-size: 28px;
+    color: #967044;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.menu__tab:hover, .menu__tab--active {
+    border-color: #967044;
+}
+
+.menu__list {
+    margin-top: 48px;
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+}
+
+.menu__list--active {
+    display: grid;
+}
+
+.menu__item {
+    display: flex;
+    gap: 24px;
+    flex-direction: row;
+    align-items: start;
+    border-bottom: 0.5px solid #d9d9d9;
+}
+
+.menu__item img {
+    max-width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.menu__item .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu__item h3 {
+    font-size: 26px;
+}
+
+.menu__item p {
+    font-size: 18px;
+}
+
+.menu__item .price {
+    font-weight: 600;
+    color: #967044;
+    margin-left: auto;
+    font-family: 'Rouge Script', cursive;
+    font-size: 28px;
+}
+
+@media (max-width: 1000px) {
+    .menu__list {
+        grid-template-columns: 1fr;
+    }
 }
